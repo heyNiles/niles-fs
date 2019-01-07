@@ -1,0 +1,16 @@
+{
+  "name": "niles-fs",
+  "version": "0.1.0",
+  "description": "Niles skill for file system operations",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "niles",
+    "skill",
+    "fs",
+    "files",
+    "folders"
+  ],
+  "author": "Telepat <gabi@telepat.io> (http://telepat.io)",
+  "license": "GPL-3.0-or-later"
+}
