@@ -1,5 +1,6 @@
 module.exports = intent => intent.ns('create_alias')
   .can([
+    'create symlinks',
     '~[create] ~[a?] ~[alias]',
   ])
   .examples([

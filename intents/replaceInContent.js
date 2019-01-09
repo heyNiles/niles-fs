@@ -1,15 +1,16 @@
 module.exports = intent => intent.ns('replace_in_content')
   .can([
+    'replace text in file content',
     '~[replace] text in file content',
     '~[replace] file content',
     'sed files',
   ])
   .examples([
-    '~[replace] "a" with "b" in file.js',
-    '~[replace] "a" with "b" in this folder',
-    '~[replace] "a" with "b" in files containing "c"',
-    '~[replace] "text1" with "text2" in py files bigger than ten mb, named "*test*"',
-    '~[replace] "bla" with "text" in c++ files called "config*" and owned by guest but excluding ../data',
+    'replace "a" with "b" in file.js',
+    'replace "a" with "b" in this folder',
+    'change "a" to "b" in files containing "c"',
+    'change "text1" to "text2" in py files bigger than ten mb, named "*test*"',
+    'replace "bla" with "text" in c++ files called "config*" and owned by guest but excluding ../data',
   ])
   .command([
     '~[replace] @[content] with @[content] in @[source]',

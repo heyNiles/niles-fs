@@ -1,5 +1,6 @@
 module.exports = intent => intent.ns('remove')
   .can([
+    'remove files and folders',
     '~[remove] files',
     '~[remove] folder',
   ])

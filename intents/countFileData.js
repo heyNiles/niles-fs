@@ -1,9 +1,8 @@
 module.exports = intent => intent.ns('count_file_data')
   .can([
     'count characters, lines and words in files',
-    'count number of characters in files',
-    'count lines in a file',
-    'count words in a file',
+    '~[list] ~[how many?] ~[count_property] in files',
+    '~[list] ~[how many?] ~[count_property] in a file',
   ])
   .examples([
     'count lines in file.js',
@@ -21,5 +20,5 @@ module.exports = intent => intent.ns('count_file_data')
   ], { train: 600, test: 60 })
   .slot('source', { filePathPattern: true })
   .slot('count_property', ['~[loc]', 'lines', 'words', 'characters'])
-  .alias('how many', ['how many', 'the number of'])
+  .alias('how many', ['how many', '~[the?] number of'])
   .alias('list', ['list', 'show', 'show me', 'display', 'count']);

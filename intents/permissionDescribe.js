@@ -1,5 +1,8 @@
 module.exports = intent => intent.ns('permission_describe')
-  .can('~[list] file ~[perms]')
+  .can([
+    'describe file and dir permissions',
+    '~[list] file ~[perms]',
+  ])
   .examples([
     'describe ./source.sh perms',
     'show filename.json permissions',

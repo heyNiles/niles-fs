@@ -1,5 +1,8 @@
 module.exports = intent => intent.ns('permission_secure')
-  .can('secure file ~[perms]')
+  .can([
+    'secure file perms',
+    'secure file ~[perms]',
+  ])
   .examples([
     'secure perms ./key',
     'secure ./dest.pem permissions',

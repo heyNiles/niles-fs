@@ -1,5 +1,6 @@
 module.exports = intent => intent.ns('diff')
   .can([
+    'diff files',
     '~[list?] ~[diff] ~[between?] files',
     '~[list?] ~[diff] ~[between?] folders',
   ])

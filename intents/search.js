@@ -1,5 +1,8 @@
 module.exports = intent => intent.ns('search')
-  .can('~[list] files')
+  .can([
+    'search files',
+    '~[list] files',
+  ])
   .examples([
     'display all files called "*report*"',
     'search .md files bigger than 1 mb',

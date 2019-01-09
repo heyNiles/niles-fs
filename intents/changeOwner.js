@@ -1,8 +1,8 @@
 module.exports = intent => intent.ns('change_owner')
   .can([
-    'change file and folder owners',
-    'change file owner',
-    'change folder owner',
+    'change file and dir owners',
+    'change ~[a?] ~[file] owner',
+    'change ~[file] owners',
   ])
   .examples([
     'make me owner of ./file.txt',
@@ -18,4 +18,6 @@ module.exports = intent => intent.ns('change_owner')
     'for ~[file?] @[source] change ~[the?] owner to @[owner]',
     'change ~[the?] owner of ~[file?] @[source] to @[owner]',
   ], { train: 600, test: 60 })
-  .slot('source', { filePathPattern: true });
+  .slot('source', { filePathPattern: true })
+  .alias('file', ['file', '~[folder]'])
+  .alias('folder', ['folder', 'dir', 'directory']);

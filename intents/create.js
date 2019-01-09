@@ -1,7 +1,10 @@
 module.exports = intent => intent.ns('create')
   .can([
-    'create files',
-    'create folders',
+    'create files and dirs',
+    '~[create] ~[a new?] file',
+    '~[create] ~[a new?] ~[folder]',
+    '~[create] files',
+    '~[create] ~[folders]',
   ])
   .examples([
     'create a readme.md file containing "# Hello"',
@@ -14,4 +17,6 @@ module.exports = intent => intent.ns('create')
   ], { train: 300, test: 30 })
   .slot('source', { filePathPattern: true })
   .alias('create', ['create', 'make'])
-  .alias('a new', ['a new', 'a']);
+  .alias('a new', ['a new', 'a'])
+  .alias('folder', ['folder', 'dir', 'directory'])
+  .alias('folders', ['folders', 'dirs', 'directories']);

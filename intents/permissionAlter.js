@@ -1,5 +1,6 @@
 module.exports = intent => intent.ns('permission_alter')
   .can([
+    'change file and dir permissions',
     '~[alter] file ~[perms]',
     '~[alter] folder ~[perms]',
   ])

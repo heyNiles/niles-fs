@@ -1,5 +1,8 @@
 module.exports = intent => intent.ns('transfer')
-  .can('~[transfer_operation] files')
+  .can(
+    'copy, move and rename files',
+    '~[transfer_operation] files',
+  )
   .examples([
     'copy files from ../apps/source to /destination',
     'move python files owned by guest, named config* but not in hidden files from ./source to ./destination',
